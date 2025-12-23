@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Exercises</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<main class="screen">
+  <h1>Exercises</h1>
+
+  <div class="card">
+    <form id="exerciseForm">
+      <input id="exerciseName" placeholder="Exercise name" required>
+      <input id="muscleGroup" placeholder="Muscle group (optional)">
+      <button>Add Exercise</button>
+    </form>
+  </div>
+
+  <section id="exerciseList"></section>
+</main>
+
+<nav class="bottom-nav">
+  <a href="index.html">Dashboard</a>
+  <a href="exercises.html" class="active">Exercises</a>
+  <a href="workout.html">Workout</a>
+  <a href="progress.html">Progress</a>
+</nav>
+
+<script type="module" src="js/ui/exercises-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.screen {
+  padding:
+    env(safe-area-inset-top)
+    var(--space-md)
+    calc(80px + env(safe-area-inset-bottom));
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-around;
+
+  padding: var(--space-sm) 0 calc(env(safe-area-inset-bottom) + var(--space-sm));
+  background: rgba(8, 8, 8, 0.85);
+  backdrop-filter: blur(20px);
+
+  border-top: 1px solid #1f1f1f;
+}
+
+.bottom-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.bottom-nav a.active {
+  color: var(--accent);
+}
