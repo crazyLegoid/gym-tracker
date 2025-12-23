@@ -1,0 +1,64 @@
+:root {
+  --bg: #0b0b0d;
+  --surface: #151518;
+  --surface-2: #1e1e22;
+  --primary: #4ade80;
+  --danger: #ef4444;
+  --text: #f8fafc;
+  --muted: #9ca3af;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100dvh;
+}
+
+main { padding: 16px; padding-bottom: 96px; }
+
+.card {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+button.primary { background: var(--primary); color: #000; font-weight: 600; }
+button.danger { background: var(--danger); }
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background: var(--surface);
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: 1px solid #222;
+}
+
+nav a {
+  color: var(--muted);
+  text-align: center;
+  padding: 14px 0;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+nav a.active { color: var(--primary); font-weight: 600; }
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="css/style.css">
+<title>Gym Tracker</title>
+</head>
+<body>
+<main>
+  <h2>Dashboard</h2>
+  <div class="card">
+    <p>Total Workouts: <strong id="totalWorkouts">0</strong></p>
+    <p>Total Exercises: <strong id="totalExercises">0</strong></p>
+  </div>
+</main>
+<nav>
+  <a href="index.html" class="active">Dashboard</a>
+  <a href="exercises.html">Exercises</a>
+  <a href="workout.html">Workout</a>
+  <a href="progress.html">Progress</a>
+</nav>
+<script type="module">
+import { state, initState } from './js/state.js';
+initState();
+document.getElementById('totalWorkouts').textContent = state.workouts.length;
+document.getElementById('totalExercises').textContent = state.exercises.length;
+</script>
+</body>
+</html>
