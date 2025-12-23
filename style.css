@@ -1,55 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system;
-  background: #0e0e0e;
-  color: #ffffff;
+  font-family: -apple-system, system-ui;
+  background: #0b0b0b;
+  color: #fff;
 }
 
-header {
-  text-align: center;
-  padding: 16px;
-  font-size: 1.4rem;
-  font-weight: 600;
-  border-bottom: 1px solid #222;
-}
-
-.form {
-  display: flex;
-  gap: 8px;
-  padding: 12px;
-}
-
-input, button {
-  flex: 1;
-  padding: 10px;
-  background: #1e1e1e;
-  border: none;
-  color: white;
-  border-radius: 6px;
+h1, h2 {
+  margin: 12px;
 }
 
 button {
-  background: #3b82f6;
-  font-weight: 600;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  color: white;
+  font-size: 1rem;
 }
 
-#entries {
-  padding: 12px;
+.screen {
+  display: none;
+  padding: 16px;
+  padding-bottom: 80px;
+}
+
+.screen.active {
+  display: block;
+}
+
+.exercise-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
 }
 
 .entry {
-  background: #1a1a1a;
+  background: #161616;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 8px;
 }
 
-.entry small {
+small {
   color: #aaa;
 }
 
-.delete {
-  color: #ef4444;
-  cursor: pointer;
-  float: right;
+.back {
+  background: none;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #222;
 }
