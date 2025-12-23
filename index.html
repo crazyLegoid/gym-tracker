@@ -3,41 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
-    <title>AuraLift | Pro Gym Tracker</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>AuraLift Pro</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="dark-mode">
+<body>
     <header class="app-header">
         <h1 id="view-title">Dashboard</h1>
-        <div class="dynamic-island-spacer"></div>
     </header>
 
-    <main id="app-content" class="safe-area-bottom">
+    <main id="app-content">
         </main>
 
     <nav class="bottom-nav">
-        <button class="nav-item active" data-view="dashboard">
+        <button class="nav-item active" onclick="UI.renderView('dashboard', this)">
             <span class="icon">🏠</span>
             <span class="label">Home</span>
         </button>
-        <button class="nav-item" data-view="workout">
+        <button class="nav-item" onclick="UI.renderView('workout', this)">
             <span class="icon">🏋️</span>
             <span class="label">Work</span>
         </button>
-        <button class="nav-item" data-view="exercises">
+        <button class="nav-item" onclick="UI.renderView('exercises', this)">
             <span class="icon">📋</span>
             <span class="label">List</span>
         </button>
-        <button class="nav-item" data-view="progress">
+        <button class="nav-item" onclick="UI.renderView('progress', this)">
             <span class="icon">📈</span>
             <span class="label">Stats</span>
         </button>
     </nav>
 
-    <script src="js/store.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/charts.js"></script>
-    <script src="js/app.js"></script>
+    <script src="store.js"></script>
+    <script src="ui.js"></script>
 </body>
 </html>
