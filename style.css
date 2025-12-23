@@ -1,64 +1,68 @@
 :root {
-  --bg: #0b0b0d;
-  --surface: #151518;
-  --surface-2: #1e1e22;
-  --primary: #4ade80;
-  --danger: #ef4444;
-  --text: #f8fafc;
-  --muted: #9ca3af;
+    --bg-color: #000000;
+    --card-bg: #1C1C1E;
+    --accent-color: #0A84FF;
+    --text-primary: #FFFFFF;
+    --text-secondary: #8E8E93;
+    --safe-top: env(safe-area-inset-top);
+    --safe-bottom: env(safe-area-inset-bottom);
 }
 
-* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  height: 100dvh;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
-main { padding: 16px; padding-bottom: 96px; }
+.app-header {
+    padding: calc(var(--safe-top) + 10px) 20px 10px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: calc(60px + var(--safe-bottom));
+    background: rgba(28, 28, 30, 0.95);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: var(--safe-bottom);
+    border-top: 0.5px solid #38383A;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 10px;
+    width: 25%;
+}
+
+.nav-item.active { color: var(--accent-color); }
 
 .card {
-  background: var(--surface);
-  border-radius: 14px;
-  padding: 14px;
-  margin-bottom: 12px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 10px 16px;
 }
 
-input, select, button {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-}
-
-button.primary { background: var(--primary); color: #000; font-weight: 600; }
-button.danger { background: var(--danger); }
-
-nav {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  background: var(--surface);
-  padding-bottom: env(safe-area-inset-bottom);
-  border-top: 1px solid #222;
-}
-
-nav a {
-  color: var(--muted);
-  text-align: center;
-  padding: 14px 0;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-nav a.active { color: var(--primary); font-weight: 600; }
-
-.list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+button {
+    min-height: 44px; /* Apple Accessibility Standard */
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
 }
